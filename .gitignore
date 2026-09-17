@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.cache/
+datasets/*.hdf5
+Data_Collections/master_teleop/diagnostics/
+Dobot_Init/master_teleop/config/master_runtime.yaml
+
+# LeRobot test fixtures
+lerobot-main/tests/artifacts/

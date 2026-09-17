@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<robot name="xtrainer_cr5a_ag95_mimic">
+  <material name="xtrainer_blue"><color rgba="0.20 0.40 0.6941 1"/></material>
+  <material name="cr5a_gray"><color rgba="0.5922 0.5922 0.5922 1"/></material>
+  <material name="cr5a_blue"><color rgba="0.7922 0.8196 0.9333 1"/></material>
+  <material name="cr5a_white"><color rgba="1 1 1 1"/></material>
+
+  <!-- SolidWorks assembly axes: +Y points down and +Z is depth.
+       Rotate to Isaac's Z-up frame, center the footprint, and place the
+       lowest caster point (838.3 mm) exactly on Z=0. -->
+  <link name="world"/>
+  <joint name="world_to_xtrainer" type="fixed">
+    <origin xyz="0.781 0.505 0.8383" rpy="-1.57079632679 0 3.14159265359"/>
+    <parent link="world"/>
+    <child link="xtrainer_base"/>
+  </joint>
+
+  <!-- The complete X-Trainer environment is one mesh. It remains fixed. -->
+  <link name="xtrainer_base">
+    <inertial>
+      <origin xyz="0.5299937 -0.1864414 -0.009367" rpy="0 0 0"/>
+      <mass value="16.7027967"/>
+      <inertia ixx="1.1683150" ixy="0.00000079" ixz="0.00000148" iyy="2.3969156" iyz="0.0106060" izz="3.5540378"/>
+    </inertial>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_001.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_002.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_003.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_004.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_005.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_006.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_007.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_008.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_009.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_010.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_011.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_012.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_013.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_014.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_015.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_016.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_017.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_018.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_019.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_020.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_021.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_022.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <visual><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_023.stl" scale="0.001 0.001 0.001"/></geometry><material name="xtrainer_blue"/></visual>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_001.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_002.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_003.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_004.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_005.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_006.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_007.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_008.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_009.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_010.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_011.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_012.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_013.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_014.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_015.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_016.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_017.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_018.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_019.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_020.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_021.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_022.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+    <collision><geometry><mesh filename="../meshes/xtrainer/real/cr5a_frame_023.stl" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+
+  <!-- CR5A side-mounted at the center of the 220 x 220 mm robot connection
+       plate in the exported STL coordinate system. The outer plate face is
+       y=0.006920982 m and its outward normal is -Y. -->
+  <link name="cr5a_base">
+    <inertial><origin xyz="0.0000081389 -0.0019104 0.028995" rpy="0 0 0"/><mass value="1.1"/><inertia ixx="0.0014545" ixy="-0.00000004324" ixz="-0.00000018126" iyy="0.001345" iyz="-0.0000062469" izz="0.002155"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/base_link.STL"/></geometry><material name="cr5a_gray"/></visual>
+    <collision><geometry><mesh filename="../meshes/cr5a/base_link.STL"/></geometry></collision>
+  </link>
+  <joint name="xtrainer_to_cr5a" type="fixed">
+    <origin xyz="0.780999 0.006920982 0.835" rpy="1.57079632679 -3.14159265359 0"/><parent link="xtrainer_base"/><child link="cr5a_base"/>
+  </joint>
+
+  <link name="Link1">
+    <inertial><origin xyz="-0.00000047455 0.0032577 0.075323" rpy="0 0 0"/><mass value="5"/><inertia ixx="0.0053277" ixy="0.00000005647" ixz="-0.000000022604" iyy="0.0051106" iyz="-0.000092562" izz="0.0034077"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J1.STL"/></geometry><material name="cr5a_gray"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J1.STL"/></geometry></collision>
+  </link>
+  <joint name="joint1" type="revolute"><origin xyz="0 0 0.064" rpy="0 0 0"/><parent link="cr5a_base"/><child link="Link1"/><axis xyz="0 0 1"/><limit lower="-6.2831" upper="6.2831" effort="100" velocity="3.14"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="Link2">
+    <inertial><origin xyz="0.00017389 0.078516 0.21351" rpy="0 0 0"/><mass value="11.9"/><inertia ixx="0.17347" ixy="-0.000000039709" ixz="0.000131" iyy="0.16953" iyz="0.000000037334" izz="0.013285"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J2.STL"/></geometry><material name="cr5a_gray"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J2.STL"/></geometry></collision>
+  </link>
+  <joint name="joint2" type="revolute"><origin xyz="0 0.064 0.083" rpy="0 0 0"/><parent link="Link1"/><child link="Link2"/><axis xyz="0 1 0"/><limit lower="-6.2831" upper="6.2831" effort="100" velocity="3.14"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="Link3">
+    <inertial><origin xyz="-0.00015029 -0.048307 0.15228" rpy="0 0 0"/><mass value="3.87"/><inertia ixx="0.064798" ixy="-0.0000015455" ixz="-0.000059339" iyy="0.064091" iyz="0.001556" izz="0.0042264"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J3.STL"/></geometry><material name="cr5a_blue"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J3.STL"/></geometry></collision>
+  </link>
+  <joint name="joint3" type="revolute"><origin xyz="0.00034991 0.007 0.42703" rpy="0 0 0"/><parent link="Link2"/><child link="Link3"/><axis xyz="0 1 0"/><limit lower="-2.7925" upper="2.7925" effort="100" velocity="3.89"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="Link4">
+    <inertial><origin xyz="-0.0000002894 0.047446 0.0020777" rpy="0 0 0"/><mass value="2.07"/><inertia ixx="0.0016115" ixy="0.0000000054436" ixz="-0.0000000047861" iyy="0.0015715" iyz="-0.000038502" izz="0.00067853"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J4.STL"/></geometry><material name="cr5a_blue"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J4.STL"/></geometry></collision>
+  </link>
+  <joint name="joint4" type="revolute"><origin xyz="-0.00034988 0.021 0.35697" rpy="0 0 0"/><parent link="Link3"/><child link="Link4"/><axis xyz="0 1 0"/><limit lower="-6.2831" upper="6.2831" effort="100" velocity="3.89"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="Link5">
+    <inertial><origin xyz="-0.00000029433 -0.0072582 0.046677" rpy="0 0 0"/><mass value="2.1"/><inertia ixx="0.0021291" ixy="0.00000002591" ixz="-0.000000012719" iyy="0.00088081" iyz="-0.000020847" izz="0.0020942"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J5.STL"/></geometry><material name="cr5a_blue"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J5.STL"/></geometry></collision>
+  </link>
+  <joint name="joint5" type="revolute"><origin xyz="0 0.049 0.067" rpy="0 0 0"/><parent link="Link4"/><child link="Link5"/><axis xyz="0 0 1"/><limit lower="-6.2831" upper="6.2831" effort="100" velocity="3.89"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="Link6">
+    <inertial><origin xyz="0.00000001019 0.022777 0.000088138" rpy="0 0 0"/><mass value="0.27"/><inertia ixx="0.0001425" ixy="0.0000000000011102" ixz="0.00000000012175" iyy="0.00019903" iyz="-0.00000022857" izz="0.00014123"/></inertial>
+    <visual><geometry><mesh filename="../meshes/cr5a/J6.STL"/></geometry><material name="cr5a_white"/></visual><collision><geometry><mesh filename="../meshes/cr5a/J6.STL"/></geometry></collision>
+  </link>
+  <joint name="joint6" type="revolute"><origin xyz="0 0.0665 0.049" rpy="0 0 0"/><parent link="Link5"/><child link="Link6"/><axis xyz="0 1 0"/><limit lower="-6.2831" upper="6.2831" effort="100" velocity="3.89"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="tool0"/>
+  <joint name="tool_joint" type="fixed"><origin xyz="0 0 0" rpy="4.71238898 0 3.14159265"/><parent link="Link6"/><child link="tool0"/></joint>
+
+  <!-- DH-Robotics AG-160-95 (official package name: AG95). -->
+  <link name="gripper_base_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.83416"/><inertia ixx="0.0013016" ixy="-6.9374e-07" ixz="5.9848e-07" iyy="0.00049972" iyz="2.0244e-07" izz="0.001498"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/base_link.STL" scale="0.001 0.001 0.001"/></geometry></visual>
+    <collision><geometry><mesh filename="../meshes/ag95/base_link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="tool0_to_ag95" type="fixed">
+    <origin xyz="0 0 -0.004" rpy="3.14159265359 0 1.57079633"/><parent link="tool0"/><child link="gripper_base_link"/>
+  </joint>
+
+  <link name="gripper_finger1_knuckle_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.011111"/><inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyy="1.92174e-06" iyz="2.04435e-13" izz="4.32374e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/crank_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/crank_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger1_joint" type="revolute"><origin xyz="-0.016 0 0.10586" rpy="0 0 3.14159265"/><parent link="gripper_base_link"/><child link="gripper_finger1_knuckle_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.6524" velocity="2" effort="1000"/><dynamics damping="0.1" friction="0.05"/></joint>
+
+  <link name="gripper_finger2_knuckle_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.011111"/><inertia ixx="3.88172e-06" ixy="-2.29456e-13" ixz="8.33e-07" iyy="1.92174e-06" iyz="2.04435e-13" izz="4.32374e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/crank_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/crank_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger2_joint" type="revolute"><origin xyz="0.016 0 0.10586" rpy="0 0 0"/><parent link="gripper_base_link"/><child link="gripper_finger2_knuckle_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.6524" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint"/></joint>
+
+  <link name="gripper_finger1_finger_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0222871"/><inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyy="7.26157e-06" iyz="7.6579e-15" izz="3.3425e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/rod_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/rod_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger1_finger_joint" type="revolute"><origin xyz="0.0292080078 0 -0.0227132622" rpy="0 0 0"/><parent link="gripper_finger1_knuckle_link"/><child link="gripper_finger1_finger_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.29775" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="0.4563942" offset="0"/></joint>
+
+  <link name="gripper_finger2_finger_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0222871"/><inertia ixx="8.72836e-06" ixy="7.0843e-15" ixz="-2.18833e-06" iyy="7.26157e-06" iyz="7.6579e-15" izz="3.3425e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/rod_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/rod_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger2_finger_joint" type="revolute"><origin xyz="0.0292080078 0 -0.0227132622" rpy="0 0 0"/><parent link="gripper_finger2_knuckle_link"/><child link="gripper_finger2_finger_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.29775" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="0.4563942" offset="0"/></joint>
+
+  <link name="gripper_finger1_inner_knuckle_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0318004"/><inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyy="1.04943e-05" iyz="8.94585e-16" izz="1.36183e-05"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger1_inner_knuckle_joint" type="revolute"><origin xyz="-0.016 0 0.10586" rpy="0 0 3.14159265"/><parent link="gripper_base_link"/><child link="gripper_finger1_inner_knuckle_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.9750" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="1.49462955" offset="0"/></joint>
+
+  <link name="gripper_finger2_inner_knuckle_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0318004"/><inertia ixx="1.39848e-05" ixy="-9.54763e-15" ixz="-5.01422e-06" iyy="1.04943e-05" iyz="8.94585e-16" izz="1.36183e-05"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/proximal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger2_inner_knuckle_joint" type="revolute"><origin xyz="0.016 0 0.10586" rpy="0 0 0"/><parent link="gripper_base_link"/><child link="gripper_finger2_inner_knuckle_link"/><axis xyz="0 -1 0"/><limit lower="0" upper="0.9750" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="1.49462955" offset="0"/></joint>
+
+  <link name="gripper_finger1_finger_tip_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0124305"/><inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyy="3.03961e-06" iyz="2.16427e-13" izz="1.11815e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/distal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/distal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger1_finger_tip_joint" type="revolute"><origin xyz="0.0394969464 0 0.0382752038" rpy="0 0 0"/><parent link="gripper_finger1_inner_knuckle_link"/><child link="gripper_finger1_finger_tip_link"/><axis xyz="0 1 0"/><limit lower="0" upper="0.9750" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="1.49462955" offset="0"/></joint>
+
+  <link name="gripper_finger2_finger_tip_link">
+    <inertial><origin xyz="0 0 0"/><mass value="0.0124305"/><inertia ixx="2.84217e-06" ixy="-2.48048e-15" ixz="8.24539e-07" iyy="3.03961e-06" iyz="2.16427e-13" izz="1.11815e-06"/></inertial>
+    <visual><geometry><mesh filename="../meshes/ag95/distal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></visual><collision><geometry><mesh filename="../meshes/ag95/distal_phalanx_Link.STL" scale="0.001 0.001 0.001"/></geometry></collision>
+  </link>
+  <joint name="gripper_finger2_finger_tip_joint" type="revolute"><origin xyz="0.0394969464 0 0.0382752038" rpy="0 0 0"/><parent link="gripper_finger2_inner_knuckle_link"/><child link="gripper_finger2_finger_tip_link"/><axis xyz="0 1 0"/><limit lower="0" upper="0.9750" velocity="2" effort="1000"/><mimic joint="gripper_finger1_joint" multiplier="1.49462955" offset="0"/></joint>
+</robot>
+

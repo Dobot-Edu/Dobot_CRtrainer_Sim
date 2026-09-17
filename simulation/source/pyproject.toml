@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "wheel", "toml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cr5-sim-leisaac"
+version = "0.2.0"
+description = "CR5A single-arm Isaac Lab teleoperation"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Yinghao Shuai", email = "yinghao.shuai@lightwheel.ai"}
+]
+maintainers = []
+keywords = ["isaaclab", "teleoperation", "cr5a"]
+classifiers = [
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+    "Isaac Sim :: 4.5.0",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "psutil",
+    "pyserial",
+    "numpy",
+    "pyyaml",
+    "h5py",
+    "packaging",
+]
+
+[project.urls]
+Homepage = "https://github.com/LightwheelAI/leisaac"
+Repository = "https://github.com/LightwheelAI/leisaac"
+
+[tool.setuptools]
+packages = {find = {}}
+include-package-data = true
+zip-safe = false
+
+
+[project.optional-dependencies]
+isaaclab = ["isaaclab[isaacsim,all]==2.3.0"]
+lerobot-async = ["grpcio>=1.73.1,<2", "protobuf>=6.31.0,<8"]

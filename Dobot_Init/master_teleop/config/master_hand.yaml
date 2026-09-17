@@ -1,0 +1,53 @@
+# Configuration used only by Data_Collections/master_teleop.
+master_hand:
+  enabled: true
+  # Stable USB identity of the single master hand currently connected.
+  # Set by 1_find_port.py. A stable /dev/serial/by-id path is preferred.
+  device: ""
+  baud_rate: 2000000
+  # The original Xtrainer port scanner tries 2 Mbps first, then 1 Mbps.
+  baud_rate_candidates: [2000000, 1000000]
+  protocol_version: 2.0
+  side: "right"
+  read_hz: 100
+  # Allow short USB scheduling stalls without interrupting an active episode.
+  watchdog_timeout_s: 0.35
+
+  # X-Trainer uses a custom position table whose present-position value is at
+  # address 140.
+  present_position_address: 140
+  present_position_length: 4
+  position_units_per_pi: 2048.0
+  buttons_active_low: true
+  torque_enable_address: 64
+  goal_position_address: 116
+  # Match dobot_xtrainer set_torque_mode(): only toggle torque. ID 17 can
+  # report a valid present position that its Goal Position limit rejects.
+  sync_goal_before_lock: false
+
+  buttons:
+    short_press_max_s: 0.5
+    long_press_min_s: 1.0
+    # Match Xtrainer: the leader is rigid when the button/control script starts.
+    initial_locked: true
+
+  gripper:
+    # Analog follows the full normalized trigger range; use binary for legacy hysteresis.
+    mode: analog
+    close_threshold: 0.50
+    open_threshold: 0.20
+
+  profiles:
+    right:
+      joint_ids: [11, 12, 14, 15, 16, 17]
+      button_board_id: 13
+      gripper_id: 18
+      joint_offsets_rad: [2.38, 3.82, 3.27, 2.37, 2.30, 1.60]
+      joint_signs: [1, 1, -1, -1, -1, 1]
+      start_joints_rad: [1.57, 0.0, 1.57, 0.0, -1.57, -1.57]
+      gripper_closed_deg: 203.0
+      gripper_open_deg: 173.0
+
+  # Physical master reference pose used by 2_get_offset.py.
+  robot_pose_init:
+    home_joint_deg: [90, 0, 90, 0, -90, -90]
