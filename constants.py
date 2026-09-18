@@ -9,13 +9,13 @@ Paths are relative to the repository root unless they are absolute.
 usd = "assets/robot/cr5a_ag95/usd/cr5a_ag95_mimic.usd"
 
 # "cr5a_master" for the physical master hand, or "keyboard" for keyboard input.
-teleop_mode = "cr5a_master"
+teleop_mode = "keyboard"
 
 # Set True to export HDF5 demonstrations.
 save_mode = True
 
 # "only_robot" is the lightweight validation task; "pick_orange" loads the kitchen.
-task = "pick_orange"
+task = "only_robot"
 
 # Stable 5090D baseline.  Change only for an intentional CUDA re-test.
 device = "cpu"
