@@ -53,12 +53,12 @@ def task_done(
         done = torch.logical_and(done, orange_height < plate_height + height_range[1])
         done = torch.logical_and(done, orange_height > plate_height + height_range[0])
 
-    joint_pos = env.scene["robot"].data.joint_pos
-    joint_names = env.scene["robot"].data.joint_names
-    indices = [joint_names.index(name) for name in (rest_joint_names or joint_names)]
-    target_values = rest_joint_positions or [0.0] * len(indices)
-    target = torch.as_tensor(target_values, device=joint_pos.device, dtype=joint_pos.dtype)
-    at_rest = torch.all(torch.abs(joint_pos[:, indices] - target) < 0.15, dim=1)
-    done = torch.logical_and(done, at_rest)
+    # joint_pos = env.scene["robot"].data.joint_pos
+    # joint_names = env.scene["robot"].data.joint_names
+    # indices = [joint_names.index(name) for name in (rest_joint_names or joint_names)]
+    # target_values = rest_joint_positions or [0.0] * len(indices)
+    # target = torch.as_tensor(target_values, device=joint_pos.device, dtype=joint_pos.dtype)
+    # at_rest = torch.all(torch.abs(joint_pos[:, indices] - target) < 0.15, dim=1)
+    # done = torch.logical_and(done, at_rest)
 
     return done
