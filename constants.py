@@ -14,8 +14,8 @@ teleop_mode = "keyboard"
 # Set True to export HDF5 demonstrations.
 save_mode = True
 
-# "only_robot" is the lightweight validation task; "pick_orange" loads the kitchen.
-task = "only_robot"
+# "only_robot" validates the robot; "pick_orange" and "grasp_tube" load task scenes.
+task = "grasp_tube"
 
 # Stable 5090D baseline.  Change only for an intentional CUDA re-test.
 device = "cpu"

@@ -31,8 +31,8 @@ teleop_mode = cfg["teleop_mode"]
 task = cfg["task"]
 if teleop_mode not in {"cr5a_master", "keyboard"}:
     raise SystemExit("teleop_mode must be cr5a_master or keyboard")
-if task not in {"only_robot", "pick_orange"}:
-    raise SystemExit("task must be only_robot or pick_orange")
+if task not in {"only_robot", "pick_orange", "grasp_tube"}:
+    raise SystemExit("task must be only_robot, pick_orange or grasp_tube")
 if not isinstance(cfg["save_mode"], bool):
     raise SystemExit("save_mode must be True or False")
 dataset_layout = cfg.get("dataset_layout", "per_episode")
@@ -82,6 +82,7 @@ esac
 case "$TASK" in
   only_robot) TASK_ID="LeIsaac-CR5A-RobotOnly-v0" ;;
   pick_orange) TASK_ID="LeIsaac-CR5A-PickOrange-v0" ;;
+  grasp_tube) TASK_ID="LeIsaac-CR5A-GraspTube-v0" ;;
 esac
 
 ARGS=(

@@ -169,3 +169,11 @@ CR5_Sim/
 ```
 
 本项目基于 [embodied-dobot/x-trainer](https://github.com/embodied-dobot/x-trainer)、Isaac Lab、LeIsaac 和 LeRobot 开发。
+
+## 试管任务（CR5A Grasp Tube）
+
+`assets/scenes/grasp_tube/training_env.usd` 来自参考 x-trainer 的 Task3。新任务使用单臂 CR5A + AG95，机器人面朝正 Y 方向，沿操作方向依次为三支待抓试管和试管架。原始 USD 不改动；任务配置将场景整体抬高 0.8 m、朝机器人方向移动 0.5 m，并同步调整试管与试管架的重置位姿。
+
+在 `constants.py` 中设置 `task = "grasp_tube"`，保持 `device = "cpu"`，然后运行 `source ./activate_sim.sh`。Gym ID 是 `LeIsaac-CR5A-GraspTube-v0`。遥操作仍用 `R` 标记失败、`N` 标记成功并重置；录制方式与抓橘子任务相同。
+
+成功判断沿用参考 Task3 的三个试管判定点同时进入试管架区域的规则。当前初始摆位固定，便于首次启动时检查可达性和相机画面；参考项目的随机摆位暂未启用。参考 USD 的试管架还引用 Isaac 4.5 在线 `DeformableTube/tube.usd`，离线运行时这些装饰网格可能缺失，需要在仿真窗口检查试管架外观。
